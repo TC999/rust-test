@@ -15,7 +15,7 @@ jobs:
     - name: 运行测试
       run:
         cargo run
-  Windiows:
+  Windows:
 
     runs-on: windows-latest
 
