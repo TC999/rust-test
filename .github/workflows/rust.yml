@@ -4,9 +4,20 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  Ubuntu:
 
     runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: 设置 Rust
+      uses: dtolnay/rust-toolchain@stable
+    - name: 运行测试
+      run:
+        cargo run
+  Windiows:
+
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v4
